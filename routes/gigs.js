@@ -20,12 +20,11 @@ router.post('/add', async (req, res) => {
     // "budget": "200",
     // "description": "some description",
     // "email": "test@gmail.com"
-// }
+    // }
     try {
-        const {title, technologies, description, budget, email} = req.body
-        console.log(req.body, 'bododoodo')
+        const { title, technologies, description, budget, email } = req.body
         const newGig = await Gig.create({
-title, technologies, description, budget, email
+            title, technologies, description, budget, email
         })
         res.json(newGig)
     } catch (err) {
@@ -33,4 +32,4 @@ title, technologies, description, budget, email
     }
 })
 
-module.exports = router 
+module.exports = router
